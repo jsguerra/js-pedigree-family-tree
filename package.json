@@ -1,20 +1,49 @@
 {
   "name": "js-pedigree-family-tree",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple vanilla javascript pedigree family tree",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsguerra/js-pedigree-family-tree.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pedigree",
+    "tree",
+    "genealogy"
+  ],
+  "author": "Jose Guerra",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jsguerra/js-pedigree-family-tree/issues"
   },
-  "homepage": "https://github.com/jsguerra/js-pedigree-family-tree#readme"
+  "homepage": "https://github.com/jsguerra/js-pedigree-family-tree#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.7",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.5"
+  }
 }
