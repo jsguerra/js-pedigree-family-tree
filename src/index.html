@@ -7,20 +7,38 @@
 </head>
 <body>
   <div class="container">
-    <h1>Hello World!</h1>
-    <table>
+    <h1>Family Tree Pedigree Examples</h1>
+    <table border="1px" class="pedigree-view">
       <tbody>
         <tr>
+          <td rowspan="2">Home Person</td>
+          <td>Father</td>
+        </tr>
+          <tr>
+            <td>1900 - 1960</td>
+          </tr>
+        <tr>
+          <td rowspan="2">1940 - 2018</td>
+          <td>Mother</td>
+        </tr>
+          <tr>
+            <td>1900 - 1960</td>
+          </tr>
+      </tbody>
+    </table>
+    <table class="pedigree-view">
+      <tbody>
+        <!-- <tr>
           <th>Home Person</th>
           <th>Parents</th>
           <th>Grand Parents</th>
-        </tr>
+        </tr> -->
         <tr>
           <td rowspan="4" id="homePerson" class="person line-bottom">Home Person</td>
           <td rowspan="2" id="Father" class="person line-bottom">Father</td>
           <td id="Grandfather" class="person grand line-bottom">Grandfather</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <td class="bio grandDate line-left-down">
           <progress value="70" max="100">70 %</progress>
           Date here</td>
