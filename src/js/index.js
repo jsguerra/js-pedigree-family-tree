@@ -26,9 +26,10 @@ console.log('Webpack Boilerplate');
 // ===============================================
 const pedigreeContainer = document.querySelectorAll('.pedigree-view');
 
-console.log(pedigreeContainer);
-for (const elContainer of pedigreeContainer) {
-  let table = `<table><tbody></tbody></table>`;
-
-  elContainer.insertAdjacentHTML('afterbegin', table);
+if (pedigreeContainer) {
+  for (const elContainer of pedigreeContainer) {
+    const table = `<table><tbody></tbody></table>`;
+  
+    elContainer.insertAdjacentHTML('afterbegin', table);
+  }
 }
