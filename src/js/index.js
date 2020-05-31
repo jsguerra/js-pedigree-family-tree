@@ -21,3 +21,14 @@ console.log('Webpack Boilerplate');
 //     and add second row below first row
 //   b. if mother add cell to second row
 //     and add second row below second row
+
+// Setup Pedigree Table
+// ===============================================
+const pedigreeContainer = document.querySelectorAll('.pedigree-view');
+
+console.log(pedigreeContainer);
+for (const elContainer of pedigreeContainer) {
+  let table = `<table><tbody></tbody></table>`;
+
+  elContainer.insertAdjacentHTML('afterbegin', table);
+}
