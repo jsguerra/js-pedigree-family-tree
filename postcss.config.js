@@ -1,8 +1,15 @@
 if(process.env.NODE_ENV === 'production') {
   module.exports = {
-      plugins: [
-          require('autoprefixer'),
-          require('cssnano')
-      ]
+    plugins: [
+      require('autoprefixer'),
+      require('cssnano')
+    ]
   }
 }
+
+// module.exports = {
+//   plugins: {
+//    autoprefixer: {},
+//    cssnano: {}
+//  },
+// }
