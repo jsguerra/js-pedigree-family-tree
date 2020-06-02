@@ -1,38 +1,10 @@
 import '../sass/style.scss';
+import Person from './person';
 
 console.log('Webpack Boilerplate');
 
-// Simple data structure
-// 1. add home person
-// 2. add home person details (birth, marriage, death, etc)
-// 3. add parent with repeated details above
-// 4. destinguish between father and mother
-
-// Person setup
-// ===============================================
-const person = {
-  name: 'Home Person',
-  bio: {
-    birthYear: 1940,
-    deathYear: 2018,
-  },
-  parents: {
-    father: {
-      name: 'father',
-      bio: {
-        birthYear: 1900,
-        deathYear: 1960
-      }
-    },
-    mother: {
-      name: 'mother',
-      bio: {
-        birthYear: 1900,
-        deathYear: 1960
-      }
-    }
-  }
-}
+const Jose = new Person('Jose', '46');
+console.log(Jose);
 
 // Table structure
 // 1. if only 1 person
