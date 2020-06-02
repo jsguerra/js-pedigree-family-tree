@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "build": "webpack --mode production",
+    "build-production": "cross-env NODE_ENV=production webpack",
     "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
@@ -45,5 +46,9 @@
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.6.5",
     "regenerator-runtime": "^0.13.5"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
