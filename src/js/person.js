@@ -1,9 +1,28 @@
-export default class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-}
+// export default class Person {
+//   constructor() {
+//     this.name = '';
+//     this.bio = {
+//       birthYear: '',
+//       deathYear: '',
+//     };
+//     this.parents = {
+//       father: {
+//         name: '',
+//         bio: {
+//           birthYear: '',
+//           deathYear: ''
+//         }
+//       },
+//       mother: {
+//         name: '',
+//         bio: {
+//           birthYear: '',
+//           deathYear: ''
+//         }
+//       }
+//     }
+//   }
+// }
 
 // Simple data structure
 // 1. add home person
@@ -36,3 +55,5 @@ const person = {
     }
   }
 }
+
+exports.person = person;
