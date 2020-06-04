@@ -7,6 +7,14 @@ console.log(family);
 console.log(family.family.personOne);
 console.log(family.family.personOne.name);
 
+for (let i in family) {
+  console.log(family[i]);
+}
+
+// Count the number of persons in the object
+const keyCount = Object.keys(family.family).length;
+console.log(keyCount);
+
 // Table structure
 // 1. if only 1 person
 //   a. 2 rows are initially added
