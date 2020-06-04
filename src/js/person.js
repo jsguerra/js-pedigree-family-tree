@@ -24,7 +24,7 @@ const family = {
       mother: ''
     },
       personFour: {
-        id: 2,
+        id: 4,
         name: 'Father Person',
         birthYear: 1880,
         deathYear: 1920,
