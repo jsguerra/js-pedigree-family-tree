@@ -1,29 +1,3 @@
-// export default class Person {
-//   constructor() {
-//     this.name = '';
-//     this.bio = {
-//       birthYear: '',
-//       deathYear: '',
-//     };
-//     this.parents = {
-//       father: {
-//         name: '',
-//         bio: {
-//           birthYear: '',
-//           deathYear: ''
-//         }
-//       },
-//       mother: {
-//         name: '',
-//         bio: {
-//           birthYear: '',
-//           deathYear: ''
-//         }
-//       }
-//     }
-//   }
-// }
-
 // Simple data structure
 // 1. add home person
 // 2. add home person details (birth, marriage, death, etc)
