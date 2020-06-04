@@ -32,28 +32,31 @@
 
 // Person setup
 // ===============================================
-const person = {
-  name: 'Home Person',
-  bio: {
+const family = {
+  personOne: {
+    id: 1,
+    name: 'Home Person',
     birthYear: 1940,
     deathYear: 2018,
+    father: '',
+    mother: ''
   },
-  parents: {
-    father: {
-      name: 'father',
-      bio: {
-        birthYear: 1900,
-        deathYear: 1960
-      }
-    },
-    mother: {
-      name: 'mother',
-      bio: {
-        birthYear: 1900,
-        deathYear: 1960
-      }
-    }
+  personTwo: {
+    id: 2,
+    name: 'Father Person',
+    birthYear: 1900,
+    deathYear: 1980,
+    father: '',
+    mother: ''
+  },
+  personThree: {
+    id: 3,
+    name: 'Mother Person',
+    birthYear: 1900,
+    deathYear: 1980,
+    father: '',
+    mother: ''
   }
 }
 
-exports.person = person;
+exports.family = family;
