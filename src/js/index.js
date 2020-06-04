@@ -1,16 +1,11 @@
 import '../sass/style.scss';
-// import Person from './person';
-import person from './person';
+import family from './person';
 
 console.log('Webpack Boilerplate');
 
-// const Jose = new Person();
-// Jose.name = 'Jose Guerra';
-// Jose.bio.birthYear = 1940;
-// Jose.bio.deathYear = 2018;
-// console.log(Jose);
-
-console.log(person)
+console.log(family);
+console.log(family.family.personOne);
+console.log(family.family.personOne.name);
 
 // Table structure
 // 1. if only 1 person
