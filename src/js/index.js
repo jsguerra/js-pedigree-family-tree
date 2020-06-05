@@ -1,17 +1,9 @@
 import '../sass/style.scss';
-import family from './person';
+import genealogy from './person';
 
 // console.log(family);
 // console.log(family.family.personOne);
 // console.log(family.family.personOne.name);
-
-for (let i in family) {
-  console.log(family[i]);
-}
-
-// Count the number of persons in the object
-const keyCount = Object.keys(family.family).length;
-console.log(keyCount);
 
 // Table structure
 // 1. if only 1 person
@@ -33,8 +25,37 @@ const pedigreeContainer = document.querySelectorAll('.pedigree-view');
 
 if (pedigreeContainer) {
   for (const elContainer of pedigreeContainer) {
-    const table = `<table><tbody></tbody></table>`;
+    const table = `
+    <table>
+      <tbody>
+      </tbody>
+    </table>
+    `;
   
     elContainer.insertAdjacentHTML('afterbegin', table);
   }
 }
+
+// Loop through the family
+for (let family in genealogy) {
+  console.log(genealogy[family]);
+}
+
+// Count the number of persons in the family object
+const keyCount = Object.keys(genealogy.family).length;
+console.log(keyCount);
+
+// Create cells based on family members
+const createRowCell = () => {
+  const cell = `
+    <tr>
+      <td rowspan="1">${genealogy.family.personOne.name}</td>
+    </tr>
+    <tr>
+      <td rowspan="1">${genealogy.family.personOne.birthYear}</td>
+    </tr>
+  `;
+  console.log('hello')
+}
+
+createRowCell();
