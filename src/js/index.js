@@ -1,11 +1,9 @@
 import '../sass/style.scss';
 import family from './person';
 
-console.log('Webpack Boilerplate');
-
-console.log(family);
-console.log(family.family.personOne);
-console.log(family.family.personOne.name);
+// console.log(family);
+// console.log(family.family.personOne);
+// console.log(family.family.personOne.name);
 
 for (let i in family) {
   console.log(family[i]);
