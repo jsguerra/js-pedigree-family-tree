@@ -43,10 +43,13 @@ for (let family in genealogy) {
 
 // Count the number of persons in the family object
 const keyCount = Object.keys(genealogy.family).length;
-console.log(keyCount);
+// console.log(keyCount);
 
 // Create cells based on family members
 const createRowCell = () => {
+  for (let i = 0; i < keyCount; i++) {
+    console.log(Math.pow((i + 2), 2));
+  }
   const cell = `
     <tr>
       <td rowspan="1">${genealogy.family.personOne.name}</td>
@@ -55,7 +58,6 @@ const createRowCell = () => {
       <td rowspan="1">${genealogy.family.personOne.birthYear}</td>
     </tr>
   `;
-  console.log('hello')
 }
 
 createRowCell();
