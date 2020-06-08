@@ -6,8 +6,8 @@
 
 // Person setup
 // ===============================================
-const family = {
-  personOne: {
+const family = [
+  {
     id: 1,
     name: 'Home Person',
     birthYear: 1940,
@@ -15,30 +15,30 @@ const family = {
     father: 2,
     mother: 3
   },
-    personTwo: {
-      id: 2,
-      name: 'Father Person',
-      birthYear: 1900,
-      deathYear: 1980,
-      father: '',
-      mother: ''
-    },
-      personFour: {
-        id: 4,
-        name: 'Father Person',
-        birthYear: 1880,
-        deathYear: 1920,
-        father: '',
-        mother: ''
-      },
-    personThree: {
-      id: 3,
-      name: 'Mother Person',
-      birthYear: 1900,
-      deathYear: 1980,
-      father: '',
-      mother: ''
-    }
-}
+  {
+    id: 2,
+    name: 'Father Person',
+    birthYear: 1900,
+    deathYear: 1980,
+    father: '',
+    mother: ''
+  },
+  {
+    id: 3,
+    name: 'Mother Person',
+    birthYear: 1900,
+    deathYear: 1980,
+    father: '',
+    mother: ''
+  },
+  {
+    id: 4,
+    name: 'Father Person',
+    birthYear: 1880,
+    deathYear: 1920,
+    father: '',
+    mother: ''
+  }
+]
 
 exports.family = family;
