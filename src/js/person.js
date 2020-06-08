@@ -4,7 +4,7 @@
 // 3. add parent with repeated details above
 // 4. destinguish between father and mother
 
-// Person setup
+// Family array of person objects
 // ===============================================
 const family = [
   {
