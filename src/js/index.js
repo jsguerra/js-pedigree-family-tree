@@ -39,6 +39,10 @@ console.log(`Array length = ${familyArr.length}`);
 // const keyCount = Object.keys(family.family).length;
 // console.log(keyCount);
 
+// Rules for the loop, if familyArray = 1 then add 2 rows 2 cells
+// if familyArray is at least = 2 then add 4 rows 8 cells
+// if familyArray is at least = 4 then add 8 rows 24 cells
+
 // Create cells based on family members
 const createRowCell = () => {
   for (let i = 0; i < familyArr.length; i++) {
