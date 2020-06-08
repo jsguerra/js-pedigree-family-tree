@@ -1,9 +1,5 @@
 import '../sass/style.scss';
-import genealogy from './person';
-
-// console.log(family);
-// console.log(family.family.personOne);
-// console.log(family.family.personOne.name);
+import family from './person';
 
 // Table structure
 // 1. if only 1 person
@@ -36,28 +32,26 @@ if (pedigreeContainer) {
   }
 }
 
-// Loop through the family
-for (let family in genealogy) {
-  console.log(genealogy[family]);
-}
+const familyArr = family.family.map(el => console.log(el));
+console.log(`Array length = ${familyArr.length}`);
 
 // Count the number of persons in the family object
-const keyCount = Object.keys(genealogy.family).length;
+// const keyCount = Object.keys(family.family).length;
 // console.log(keyCount);
 
 // Create cells based on family members
 const createRowCell = () => {
-  for (let i = 0; i < keyCount; i++) {
-    console.log(Math.pow((i + 2), 2));
+  for (let i = 0; i < familyArr.length; i++) {
+    console.log(Math.pow(2, (i + 1)));
   }
-  const cell = `
-    <tr>
-      <td rowspan="1">${genealogy.family.personOne.name}</td>
-    </tr>
-    <tr>
-      <td rowspan="1">${genealogy.family.personOne.birthYear}</td>
-    </tr>
-  `;
+  // const cell = `
+  //   <tr>
+  //     <td rowspan="1">${genealogy.family[0].name}</td>
+  //   </tr>
+  //   <tr>
+  //     <td rowspan="1">${genealogy.family[0].birthYear}</td>
+  //   </tr>
+  // `;
 }
 
 createRowCell();
