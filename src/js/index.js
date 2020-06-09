@@ -47,7 +47,7 @@ const createCell = (content, rowspan) => {
 // Create rows
 const createRow = () => {
   const row = `<tr>
-    <td>test</td>
+    ${createCell('text', 1)}
   </tr>`;
 
   return row;
@@ -61,7 +61,7 @@ if (pedigreeContainer) {
     const table = `
     <table border="1px">
       <tbody>
-        ${createRow(elContainer)}
+        ${createRow()}
       </tbody>
     </table>
     `;
