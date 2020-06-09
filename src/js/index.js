@@ -15,31 +15,16 @@ import family from './person';
 //   b. if mother add cell to second row
 //     and add second row below second row
 
-// Setup Pedigree Table
-// ===============================================
-const pedigreeContainer = document.querySelectorAll('.pedigree-view');
 
-if (pedigreeContainer) {
-  for (const elContainer of pedigreeContainer) {
-    const table = `
-    <table>
-      <tbody>
-      </tbody>
-    </table>
-    `;
-  
-    elContainer.insertAdjacentHTML('afterbegin', table);
-  }
-}
-
-const familyArr = family.family.map(el => console.log(el));
-console.log(`Array length = ${familyArr.length}`);
+// const familyArr = family.family.map(el => console.log(el));
+// console.log(`Array length = ${familyArr.length}`);
 
 // Count the number of persons in the family object
 // const keyCount = Object.keys(family.family).length;
 // console.log(keyCount);
 
-// Rules for the loop, if familyArray = 1 then add 2 rows 2 cells
+// Rules for the loop:
+// if familyArray = 1 then add 2 rows 2 cells
 // if familyArray is at least = 2 then add 4 rows 8 cells
 // if familyArray is at least = 4 then add 8 rows 24 cells
 
@@ -47,14 +32,40 @@ console.log(`Array length = ${familyArr.length}`);
 //   console.log(Math.pow(2, (i + 1)));
 // }
 
+// Setup Pedigree Table
+// ===============================================
+const pedigreeContainer = document.querySelectorAll('.pedigree-view');
+
 // Create cells based on family members
 const createCell = (content, rowspan) => {
   // create a template for the cell
-  const cell = `<td rowspan="${rowspan}">${content}</td>`;
+  const cell = `<td rowspan="${rowspan}" class="">${content}</td>`;
 
   return cell;
 }
 
+// Create rows
 const createRow = () => {
+  const row = `<tr>
+    <td>test</td>
+  </tr>`;
 
+  return row;
+}
+
+// Test for class
+if (pedigreeContainer) {
+
+  // Look for all pedigrees
+  for (const elContainer of pedigreeContainer) {
+    const table = `
+    <table border="1px">
+      <tbody>
+        ${createRow(elContainer)}
+      </tbody>
+    </table>
+    `;
+  
+    elContainer.insertAdjacentHTML('afterbegin', table);
+  }
 }
