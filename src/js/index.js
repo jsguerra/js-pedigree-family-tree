@@ -43,19 +43,18 @@ console.log(`Array length = ${familyArr.length}`);
 // if familyArray is at least = 2 then add 4 rows 8 cells
 // if familyArray is at least = 4 then add 8 rows 24 cells
 
+// for (let i = 0; i < familyArr.length; i++) {
+//   console.log(Math.pow(2, (i + 1)));
+// }
+
 // Create cells based on family members
-const createRowCell = () => {
-  for (let i = 0; i < familyArr.length; i++) {
-    console.log(Math.pow(2, (i + 1)));
-  }
-  // const cell = `
-  //   <tr>
-  //     <td rowspan="1">${genealogy.family[0].name}</td>
-  //   </tr>
-  //   <tr>
-  //     <td rowspan="1">${genealogy.family[0].birthYear}</td>
-  //   </tr>
-  // `;
+const createCell = (content, rowspan) => {
+  // create a template for the cell
+  const cell = `<td rowspan="${rowspan}">${content}</td>`;
+
+  return cell;
 }
 
-createRowCell();
+const createRow = () => {
+
+}
