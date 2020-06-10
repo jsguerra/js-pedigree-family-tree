@@ -15,10 +15,6 @@ import family from './person';
 //   b. if mother add cell to second row
 //     and add second row below second row
 
-
-// const familyArr = family.family.map(el => console.log(el));
-// console.log(`Array length = ${familyArr.length}`);
-
 // Count the number of persons in the family object
 // const keyCount = Object.keys(family.family).length;
 // console.log(keyCount);
@@ -28,15 +24,18 @@ import family from './person';
 // if familyArray is at least = 2 then add 4 rows 8 cells
 // if familyArray is at least = 4 then add 8 rows 24 cells
 
-// for (let i = 0; i < familyArr.length; i++) {
+// for (let i = 0; i < familyGroup.length; i++) {
 //   console.log(Math.pow(2, (i + 1)));
 // }
 
-// Setup Pedigree Table
+// Setup variables
 // ===============================================
 const pedigreeContainer = document.querySelectorAll('.pedigree-view');
+const familyGroup = family.family.map(el => console.log(el));
+console.log(`Array length = ${familyGroup.length}`);
 
-// Create cells based on family members
+// Create cells
+// ================================================
 const createCell = (content, rowspan) => {
   // create a template for the cell
   const cell = `<td rowspan="${rowspan}" class="">${content}</td>`;
@@ -45,14 +44,17 @@ const createCell = (content, rowspan) => {
 }
 
 // Create rows
-const createRow = () => {
+// ================================================
+const createRow = (content, rowspan) => {
   const row = `<tr>
-    ${createCell('text', 1)}
+    ${createCell(content, rowspan)}
   </tr>`;
 
   return row;
 }
 
+// Create the table pedigree
+// ================================================
 // Test for class
 if (pedigreeContainer) {
 
@@ -61,7 +63,7 @@ if (pedigreeContainer) {
     const table = `
     <table border="1px">
       <tbody>
-        ${createRow()}
+        ${createRow('text', 1)}
       </tbody>
     </table>
     `;
