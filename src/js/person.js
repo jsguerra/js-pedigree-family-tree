@@ -9,7 +9,9 @@
 const family = [
   {
     "id": 1,
+    "generation": 1,
     "name": "Home Person",
+    "gender": "m",
     "birthYear": 1940,
     "deathYear": 2018,
     "father": 2,
@@ -17,7 +19,9 @@ const family = [
   },
   {
     "id": 2,
+    "generation": 2,
     "name": "Father Person",
+    "gender": "m",
     "birthYear": 1900,
     "deathYear": 1980,
     "father": "",
@@ -25,7 +29,9 @@ const family = [
   },
   {
     "id": 3,
+    "generation": 2,
     "name": "Mother Person",
+    "gender": "f",
     "birthYear": 1900,
     "deathYear": 1980,
     "father": "",
@@ -33,7 +39,9 @@ const family = [
   },
   {
     "id": 4,
+    "generation": 3,
     "name": "Father Person",
+    "gender": "m",
     "birthYear": 1880,
     "deathYear": 1920,
     "father": "",
