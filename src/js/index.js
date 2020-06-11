@@ -1,20 +1,19 @@
 import '../sass/style.scss';
-import family from './person';
+import { family } from './person';
 
 // Count the number of persons in the family object
-// const keyCount = Object.keys(family.family).length;
+// const keyCount = Object.keys(family).length;
 // console.log(keyCount);
 
-// for (let i = 0; i < familyGroup.length; i++) {
-//   console.log(Math.pow(2, (i + 1)));
-// }
+for (let i = 0; i < family.length; i++) {
+  console.log(Math.pow(2, (i + 1)));
+}
 
 // Setup variables
 // ===============================================
 const pedigreeContainer = document.querySelectorAll('.pedigree-view');
-const familyGroup = family.family;
 
-console.log(`Array length = ${familyGroup.length}`);
+console.log(`Array length = ${family.length}`);
 
 // Create cells
 // ================================================
@@ -30,11 +29,13 @@ const createCell = () => {
 const createRow = () => {
   const rows = [];
 
-  for (let i = 0; i < familyGroup.length; i++) {
+  for (let i = 0; i < family.length; i++) {
     let row = `<tr></tr>`;
 
     rows.push(row);
   }
+
+  console.log(rows);
 }
 
 // Table structure
@@ -62,7 +63,7 @@ const createRow = () => {
 if (pedigreeContainer) {
 
   // Look for all pedigrees
-  for (const elContainer of pedigreeContainer) {
+  pedigreeContainer.forEach((el) => {
     const table = `
     <table border="1px">
       <tbody>
@@ -70,9 +71,16 @@ if (pedigreeContainer) {
       </tbody>
     </table>
     `;
+
+    console.log(el);
   
-    elContainer.insertAdjacentHTML('afterbegin', table);
-  }
+    el.insertAdjacentHTML('afterbegin', table);
+  });
+
+  // Look for all pedigrees
+  // for (const elContainer of pedigreeContainer) {
+
+  // }
 }
 
 function tableCreate() {
