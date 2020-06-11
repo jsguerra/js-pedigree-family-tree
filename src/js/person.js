@@ -6,7 +6,7 @@
 
 // Family array of person objects
 // ===============================================
-const family = [
+export const family = [
   {
     "id": 1,
     "generation": 1,
@@ -49,4 +49,4 @@ const family = [
   }
 ]
 
-exports.family = family;
+// exports.family = family;
