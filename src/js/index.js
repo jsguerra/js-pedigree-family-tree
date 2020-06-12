@@ -5,6 +5,8 @@ import { family } from './person';
 // const keyCount = Object.keys(family).length;
 // console.log(keyCount);
 
+console.log(family);
+
 for (let i = 0; i < family.length; i++) {
   console.log(Math.pow(2, (i + 1)));
 }
@@ -17,25 +19,22 @@ console.log(`Array length = ${family.length}`);
 
 // Create cells
 // ================================================
-const createCell = () => {
+const createCell = (content) => {
   // create a template for the cell
-  const cell = `<td rowspan="1" class="m generation-">test</td>`;
+  const cell = `<td rowspan="1" class="m generation-">${content}</td>`;
 
   return cell;
 }
 
 // Create rows
 // ================================================
-const createRow = () => {
-  const rows = [];
+const createRow = (arr, content) => {
+  const rows = arr.map(n => `<tr>${createCell(content)}</tr>`);
 
-  for (let i = 0; i < family.length; i++) {
-    let row = `<tr></tr>`;
+  const rowsMarkup = rows.join('');
 
-    rows.push(row);
-  }
-
-  console.log(rows);
+  console.log(rowsMarkup);
+  return rowsMarkup;
 }
 
 // Table structure
@@ -63,16 +62,14 @@ const createRow = () => {
 if (pedigreeContainer) {
 
   // Look for all pedigrees
-  pedigreeContainer.forEach((el) => {
+  pedigreeContainer.forEach((el, index) => {
     const table = `
     <table border="1px">
       <tbody>
-        ${createRow()}
+        ${createRow(family, family[index].name)}
       </tbody>
     </table>
     `;
-
-    console.log(el);
   
     el.insertAdjacentHTML('afterbegin', table);
   });
