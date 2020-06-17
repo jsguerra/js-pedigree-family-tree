@@ -120,7 +120,7 @@ $(document).ready(function() {
     // whether we're on the father or the mother
 		var rel = '';
 
-		// grab the content
+		// grab the content (removes spaces and add breaks)
 		var content = $.trim($(this).html());
 		var lines = content.split('\n');
 
