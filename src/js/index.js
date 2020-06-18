@@ -5,6 +5,10 @@ import { family } from './person';
 // const keyCount = Object.keys(family).length;
 // console.log(keyCount);
 
+family.forEach(function(item) {
+  console.log(item.bio);
+});
+
 console.log(family);
 
 for (let i = 0; i < family.length; i++) {
