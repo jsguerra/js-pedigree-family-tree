@@ -66,11 +66,10 @@ const createRow = (arr, content) => {
 if (pedigreeContainer) {
 
   // Look for all pedigrees
-  pedigreeContainer.forEach((el, index) => {
+  pedigreeContainer.forEach((el) => {
     const table = `
     <table border="1px">
       <tbody>
-        ${createRow(family, family[index].name)}
       </tbody>
     </table>
     `;
